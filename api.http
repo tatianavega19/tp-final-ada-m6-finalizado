@@ -1,0 +1,56 @@
+### ver version
+GET http://localhost:5000/
+# Authorization:bearer 5bde67fdb60a026d083a70325b923ce47b03c8b492a9c01a43a387d45901427d36c13b7861e3e890bc110b681a9258c5efb643d5b20c1a23d428525136c1c6d3
+
+### crear usurio
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+     "username" : "joa",
+     "fullname": "johana rodriguez",
+     "password": "Joahna123@",
+     "email": "joa@gmail.com",
+     "birthdate": "1996/04/15",
+     "nationality": "Argentina"
+     
+}
+
+
+### actualizar usuario
+PATCH   http://localhost:5000/me/1192458c-905d-40d1-bffb-552ba3c8e127
+Content-Type: application/json
+//Authorization:  " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiNzRkOTdmMDQtNTAzZC00ZmVhLTk1ODItYjJiOGVjOTlhNTExIiwiaWF0IjoxNzIwMzc4MTUxLCJleHAiOjE3MjAzNzgyMTF9.AmH0hGY7PNZpZ5q6qeX4OwFcSJs-ptyqJL1-Uc_sV9o"
+
+{
+     "username" : "Elisa Gonzalez",
+     "fullname": "Elisa Gonzalez",
+     "email": "elisa@gmail.com",
+     "birthdate": "2021-08-14",
+     "nationality": "Argentina",
+     "password": "Elisa12@"
+}
+
+
+### borrar
+DELETE   http://localhost:5000/user/edb42019-e0db-46e6-9254-32b0dbd11a31
+//Falta el token aca
+
+
+### login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+     "email": "bella1@gmail.com",
+     "password": "Bella123@"
+}
+
+
+### logout
+POST http://localhost:5000/logout
+Content-Type: application/json
+
+{
+    "email": "bella1@gmail.com"
+}
